@@ -30,7 +30,7 @@ Dự án này là một ứng dụng web cho phép người dùng đặt lịch 
 1. Clone repository:
 
     ```bash
-  
+  https://github.com/dinhquyn/weddatlichsanbong.git
     ```
 
 2. Cài đặt các gói phụ thuộc:
@@ -74,4 +74,4 @@ Dự án này được cấp phép theo Giấy phép MIT. Xem tệp [LICENSE](LI
 
 ## Liên hệ
 
-Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào, vui lòng liên hệ với chúng tôi qua email tại [email@example.com](mailto:email@example.com).
+Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào, vui lòng liên hệ với chúng tôi qua email tại 22010342@st.phenikaa-uni.edu.vn.
