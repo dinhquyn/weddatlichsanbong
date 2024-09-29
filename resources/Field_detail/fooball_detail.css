@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.detail-carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+.list-group-item i {
+    width: 25px;
+}
+
+.amenities .card {
+    transition: all 0.3s ease;
+}
+
+.amenities .card:hover {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+#map {
+    border-radius: 4px;
+}
+#back_to_top{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(55, 183, 252);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 40px;
+    right: -50px; 
+    cursor: pointer;
+    transition: right 0.5s ease;
+    z-index: 6;
+}

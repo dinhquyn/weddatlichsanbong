@@ -1,65 +1,64 @@
 .main{
-    width: 100%;
-    min-height: 1000px;
-    margin: auto;
+  width: 100%;
+  min-height: 1000px;
+  margin: auto;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 .carousel-inner {
-    height: 650px; /* Chỉnh chiều cao theo nhu cầu */
-    position: relative;
-  }
-  
-  .carousel-inner img {
-    height: 100%; /* Đảm bảo ảnh chiếm hết chiều cao */
-  }
+  height: 650px; /* Chỉnh chiều cao theo nhu cầu */
+  position: relative;
+}
+
+.carousel-inner img {
+  height: 100%; /* Đảm bảo ảnh chiếm hết chiều cao */
+}
 /* search bar */
 .search{
-  height: 80px;
-  width: 60%;
-  border: solid 10px rgba(245, 245, 245, 0.247);
-  border-radius: 7px;
-  margin: auto;
-  position: absolute;
-  top: 520px;
-  left: 410px; 
-  display: flex;
-  flex-direction: row;
+height: 80px;
+width: 60%;
+border: solid 10px rgba(245, 245, 245, 0.247);
+border-radius: 7px;
+margin: auto;
+position: absolute;
+top: 520px;
+left: 410px; 
+display: flex;
+flex-direction: row;
 }
 #search_name{
-  height: 100%;
-  width: 60%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0px;
-  border: none;
-  padding-left: 10px;
-  box-sizing: border-box
+height: 100%;
+width: 60%;
+background-color: rgb(255, 255, 255);
+border-radius: 0px;
+border: none;
+padding-left: 10px;
+box-sizing: border-box
 }
 #search_name:focus{
-  outline: solid 3px rgba(24, 141, 250, 0.247);
+outline: solid 3px rgba(24, 141, 250, 0.247);
 }
 .form-select{
-  height: 100% !important;
-  width: 30% !important;
-  border-radius: 0px !important;
-  outline: none !important;
-  border: none;
-  border-left: solid 1px black !important; 
+height: 100% !important;
+width: 30% !important;
+border-radius: 0px !important;
+outline: none !important;
+border: none;
+border-left: solid 1px black !important; 
 }
 .form-select:focus{
-  outline: none !important;
+outline: none !important;
 }
 #button_search{
-  height: 100% !important;
-  width: 20% !important;
-  border-radius: 0px !important;
-  background-color: rgb(2, 9, 110) !important;
-  color: white;
+height: 100% !important;
+width: 20% !important;
+border-radius: 0px !important;
+background-color: rgb(2, 9, 110) !important;
+color: white;
 }
 #button_search:hover{
-  background-color: rgb(254, 254, 255) !important;
-  color: rgb(2, 9, 110);
+background-color: rgb(254, 254, 255) !important;
+color: rgb(2, 9, 110);
 }
 /* end search bar */
-  
