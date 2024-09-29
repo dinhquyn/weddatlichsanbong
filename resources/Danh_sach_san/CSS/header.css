@@ -1,0 +1,164 @@
+.header{
+    position: relative;
+    background-color: #000066;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Tạo bóng cho header */
+    z-index: 1000;
+}
+.logo{
+    width: 270px;
+    height: 270px;
+}
+.openmenu {
+    color: white;
+    font-size: 35px;
+    align-self: center;
+}
+.open{
+    background-color: white;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.open:hover {
+    cursor: pointer;
+    font-size: 35px;
+}
+.overlay{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 30;
+}
+.hidden{
+    display: none;
+}
+.login{
+    color: white;
+    font-size: 50px;
+    display: block;
+    margin-right: 20px;
+    align-self: center;
+}
+/* bar */
+.side-bar{
+    position: absolute;
+    background-color: #010141;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 20%;
+    z-index: 100;
+    
+}
+.side-bar ul{
+    margin-top: 130px;
+    list-style: none;
+}
+.side-bar ul a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 6px;
+    box-shadow: -3px -3px 7px #000099,
+                 3px 3px 5px #000099 ;
+    position: relative;
+                 
+}
+.media-icons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.media-icons a{
+    margin: 0 4px;
+    font-size: 17px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    box-shadow: -3px -3px 7px #000099,
+                 3px 3px 5px #000099 ;
+    position: relative;
+                
+}
+.side-bar ul a:hover:before,
+.media-icons a:hover::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow:  inset -3px -3px 7px #000099,
+                 inset 3px 3px 5px #000099;
+}
+.side-bar ul a:hover:before{
+    border-radius: 6px;
+}
+.side-bar ul a:hover{
+    color: #3498db;
+}
+.media-icons a:hover::before{
+    border-radius: 50%;
+}
+.media-icons a:nth-child(1){
+    color: #4267b2;
+}
+.media-icons a:nth-child(2){
+    color: #1da1f2;
+}
+.media-icons a:nth-child(3){
+    color: #e1306c;
+}
+.media-icons a:nth-child(4){
+    color: #ff0000;
+}
+label{
+    font-size: 17px;
+    color: white;
+    box-shadow: -3px -3px 7px #000099,
+                 3px 3px 5px #000099;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 5px;
+    left: 340px;
+}
+/* .bars{
+    position: absolute;
+    left:15px;
+    top:15px
+
+} */
+label:hover{
+    box-shadow:  inset -3px -3px 7px #000099,
+                 inset 3px 3px 5px #000099;
+    color: #3498db;
+}
+#check{
+    display: none;
+}

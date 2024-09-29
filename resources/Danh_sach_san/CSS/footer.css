@@ -1,0 +1,223 @@
+.footer{
+    width: 100%;
+    height: 350px;
+    background-color: #000066;
+    display: flex;
+    flex-direction: column;
+}
+.footer_title{
+    color: white !important;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    margin-top: 0 !important;
+}
+.underline {
+    width: 40px;
+    height: 1.5px;
+    background-color: #38cbfc;
+    margin-top: 3px;
+    margin-left: 1px;
+}
+/* footer_content */
+.footer_content{
+    width: 80%;
+    margin: auto;
+    height: 310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+/* footer contact */
+.footer_contact{
+    width: 280px;
+    height: 270px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.footer_contact>p{
+    color: rgb(202, 200, 200);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.footer_contact>p>a{
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+}
+.footer_contact>p>a:hover{
+    color: rgb(202, 200, 200);
+}
+/* footer support */
+.footer_support{
+    width: 280px;
+    height: 270px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.footer_support>a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgb(155, 155, 155);
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+.footer_support>a:first-of-type{
+    margin-top: 30px !important;
+}
+.footer_support>a:hover{
+    color: rgb(202, 200, 200);
+}
+/* footer linkInfor */
+.footer_linkInfor{
+    width: 280px;
+    height: 270px;
+    padding-top: 10px;
+}
+.footer_linkInfor>p{
+    color: rgb(202, 200, 200);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; 
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 2px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.facebook-icon:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.instagram-icon:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+/* footer fanpage */
+.footer_fanpage{
+    width: 280px;
+    height: 270px;
+    padding-top: 10px;
+}
+.fanpage_box {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+#fanpage_box_background {
+    width: 100%;
+    height: 130px;
+    margin-top: 10px;
+}
+
+#fanpage_box_avatar {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.fanpage_group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.fanpage_group_name {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fanpage_group_name>p{
+    font-size: 12px;
+}
+#fanpage_name {
+    text-decoration: none;
+    color: white;
+}
+
+#fanpage_name:hover {
+    text-decoration: underline;
+}
+.follow_page {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    background-color: #f1f1f1; /* Light gray background */
+    color: black; /* Black text color */
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.follow_page i {
+    background-color: #4267B2;
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow_page:hover {
+    background-color: #c1bfbf;
+}
+
+/* footer end */
+.footer_end{
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-top: 0.01mm solid #2f2f2f;
+    padding-top: 15px;
+}
