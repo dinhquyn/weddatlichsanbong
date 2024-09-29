@@ -6,11 +6,22 @@
     top: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Tạo bóng cho header */
+    z-index: 100;
+    display: flex;
 }
-.logo{
-    width: 270px;
-    height: 270px;
+.header .logo{
+    width: 130px;
+    height: 130px;
 }
+.header .logo img{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-self: center;
+    margin-left: 44px;
+}
+
+
 .openmenu {
     color: white;
     font-size: 35px;
@@ -42,12 +53,12 @@
 .hidden{
     display: none;
 }
-.login{
+.header .login{
     color: white;
     font-size: 50px;
     display: block;
-    margin-right: 20px;
     align-self: center;
+    margin-left: 70px;
 }
 /* bar */
 .side-bar{
@@ -131,7 +142,7 @@
 .media-icons a:nth-child(4){
     color: #ff0000;
 }
-label{
+label.cancel{
     font-size: 17px;
     color: white;
     box-shadow: -3px -3px 7px #000099,
@@ -147,13 +158,7 @@ label{
     top: 5px;
     left: 340px;
 }
-/* .bars{
-    position: absolute;
-    left:15px;
-    top:15px
-
-} */
-label:hover{
+label.cancel:hover{
     box-shadow:  inset -3px -3px 7px #000099,
                  inset 3px 3px 5px #000099;
     color: #3498db;
@@ -161,3 +166,7 @@ label:hover{
 #check{
     display: none;
 }
+.no-style {
+    color: inherit; /* Giữ màu của văn bản xung quanh */
+    text-decoration: none; /* Bỏ gạch chân */
+  }
