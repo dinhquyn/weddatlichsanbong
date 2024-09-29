@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.vergency{
+    width: 100%;
+    font-family: 'CustomFont', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+@font-face{
+    font-family: 'CustomFont';
+    src: url('font\futuranowtext-medium.woff2') format('truetype');
+}
+/* back to top button*/
+#back_to_top{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(55, 183, 252);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 40px;
+    right: -50px; 
+    cursor: pointer;
+    transition: right 0.5s ease;
+    z-index: 6;
+}
