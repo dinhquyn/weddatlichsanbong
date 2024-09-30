@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sân bóng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+
+    <link href="football_detail.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+</head>
+
+<body>
+    <div class="header d-flex justify-content-between">
+        <div class="openmenu"><button class="open"><i class='bx bx-menu'></i></button></div>
+        <a href="index.html"><img src="../img/header_img/logo.png" alt="Logo" class="img-fluid logo"></a>
+        <a href="" class="login"><i class='bx bxs-user-circle'></i></a>
+        <div class="overlay hidden">
+            <div class="side-bar">
+                <div class="title">
+                    <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
+                </div>
+                <ul>
+                    <li><a href="../index_user.html"><i class="fas fa-home" style="margin-right: 10px;"></i>Trang
+                            Chủ</a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-stream" style="margin-right: 10px;"></i>Tổng quát</a></li>
+                    <li><a href="../History/History.html"><i class="fas fa-calendar-week"
+                                style="margin-right: 10px;"></i>Lịch
+                            đã
+                            đặt</a>
+                    </li>
+                    <li><a href="football_detail.html"><i class="fas fa-qestion-circle"
+                                style="margin-right: 10px;"></i>Thông tin</a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-sliders-h" style="margin-right: 10px;"></i>Dich vụ</a></li>
+                    <li><a href="#"><i class="fas fa-phone-volume" style="margin-right: 10px;"></i>Liên hệ</a></li>
+                    <li><a href="#"><i class="fas fa-comments" style="margin-right: 10px;"></i>Đánh giá</a></li>
+                </ul>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <main class="main">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="mb-4">Thông tin sân</h1>
+                    <div id="fieldCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d"
+                                    class="d-block w-100" alt="Football Field 1">
+
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://chuyennguyentrai.edu.vn/uploads/TIN%20TUC/NAM%202020/TIN%20GIAO%20DUC/anh2.jpg"
+                                    class="d-block w-100" alt="Football Field 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12"
+                                    class="d-block w-100" alt="Football Field 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#fieldCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Trước</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#fieldCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Kế tiếp</span>
+                        </button>
+                    </div>
+                    <div class="mb-4">
+                        <h2>Chi tiết sân</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="bi bi-rulers me-2"></i> Kích thước: 105m x 68m</li>
+                            <li class="list-group-item"><i class="bi bi-people-fill me-2"></i> Số chỗ ngồi: 500</li>
+                            <li class="list-group-item"><i class="bi bi-geo-alt-fill me-2"></i> Vị trí: Phenikaa </li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h2>Tiện nghi</h2>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-lightbulb fs-1 text-primary"></i>
+                                        <h5 class="card-title mt-3">Có đèn sáng</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-door-open fs-1 text-primary"></i>
+                                        <h5 class="card-title mt-3">Phòng thay đồ</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-p-square fs-1 text-primary"></i>
+                                        <h5 class="card-title mt-3">Chỗ đỗ xe</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Đánh giá và xếp hạng</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Đánh giá trung bình: 4.5/5</h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">4.5</div>
+                            </div>
+                            <div class="review">
+                                <p><strong>Mr.Đạt</strong> - Sân chơi tuyệt vời, được bảo trì tốt!</p>
+                                <p class="text-muted">Rating: 5/5</p>
+                            </div>
+                            <div class="review">
+                                <p><strong>Mr.Anh</strong> - Tiện nghi tuyệt vời, nhưng việc đỗ xe có thể khó khăn.</p>
+                                <p class="text-muted">Rating: 4/5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Đặt sân ngay</h2>
+                            <form id="bookingForm">
+                                <div class="mb-3">
+                                    <p for="bookingDate" class="form-label">Ngày tháng</p>
+                                    <input type="date" class="form-control" id="bookingDate" required>
+                                </div>
+                                <div class="mb-3">
+                                    <p for="bookingTime" class="form-label">Giờ</p>
+                                    <select class="form-select" id="bookingTime" required>
+                                        <option value="">Chọn giờ</option>
+                                        <option value="09:00">09:00 - 10:00</option>
+                                        <option value="10:00">10:00 - 11:00</option>
+                                        <option value="11:00">11:00 - 12:00</option>
+                                        <option value="12:00">12:00 - 13:00</option>
+                                        <option value="13:00">13:00 - 14:00</option>
+                                        <option value="14:00">14:00 - 15:00</option>
+                                        <option value="15:00">15:00 - 16:00</option>
+                                        <option value="16:00">16:00 - 17:00</option>
+                                        <option value="17:00">17:00 - 18:00</option>
+                                        <option value="17:00">18:00 - 20:00</option>
+                                        <option value="17:00">20:00 - 22:00</option>
+
+
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary w-100" onclick="pay()">Đặt sân ngay</button>
+                                <script>
+                                    function pay() {
+                                        location.replace("http://127.0.0.1:5500/resources/Pay/Pay.html");
+
+                                    }
+                                </script>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Công cụ ước tính giá</h2>
+                            <p class="card-text">Mỗi giờ: 150k</p>
+                            <p class="card-text">Tổng số: <span id="estimatedPrice">$0</span></p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Vị trí</h2>
+                            <div id="map" style="height: 300px;">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.4442712500863!2d105.7477026634481!3d20.96146528731244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313452e46720cded%3A0x196cc28b5da4838c!2zU8OibiBCw7NuZyDEkEggUGhlbmlrYWE!5e0!3m2!1svi!2s!4v1726683080595!5m2!1svi!2s"
+                                    width="380" height="300" style="border:5;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="back_to_top">
+            <i class="fas fa-chevron-up"></i>
+            <script src="https://code.jquery.com/jquery-3.7.1.js"
+                integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop()) {
+                            $('#back_to_top').css('right', '30px');
+                        } else {
+                            $('#back_to_top').css('right', '-50px');
+                        }
+                    });
+                    $('#back_to_top').click(function () {
+                        $('html, body').animate({ scrollTop: 0 }, 600);
+                        return false;
+                    });
+                });
+            </script>
+        </div>
+    </main>
+
+
+    <div class="footer">
+        <div class="footer_content">
+            <div class="footer_contact">
+                <p class="footer_title">THÔNG TIN LIÊN HỆ:</p>
+                <div class="underline"></div>
+                <p>Phone: <a href=""></a></p>
+                <p>Email: </p>
+            </div>
+            <div class="footer_support">
+                <p class="footer_title">CHÍNH SÁCH HỖ TRỢ:</p>
+                <div class="underline"></div>
+                <a href="">Tìm kiếm</a>
+                <a href="">Giới thiệu</a>
+                <a href="">Chính sách đổi trả</a>
+                <a href="">Chính sách bảo mật</a>
+                <a href="">Điều khoản dịch vụ</a>
+            </div>
+            <div class="footer_linkInfor">
+                <p class="footer_title">THÔNG TIN LIÊN KẾT:</p>
+                <div class="underline"></div>
+                <p>Hãy kết nối với chúng tôi.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Vergency.vn" class="social-icon facebook-icon" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vergency.vn/" class="social-icon instagram-icon" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_fanpage">
+                <p class="footer_title">THEO DÕI FANPAGE CHÚNG TÔI ĐỂ CẬP NHẬT XU HƯỚNG THỜI TRANG HOT NHẤT:</p>
+                <div class="underline"></div>
+                <nav class="fanpage_box">
+                    <a href="https://www.facebook.com/Vergency.vn/?ref=embed_page">
+                        <img src="img/footer_img/fanpage_box_background.png" alt="vergency fanpage"
+                            id="fanpage_box_background">
+                    </a>
+                    <div class="fanpage_group">
+                        <a href="https://www.facebook.com/Vergency.vn/?ref=embed_page"><img
+                                src="img/footer_img/fanpage_box_avatar.png" alt="vergency fanpage"
+                                id="fanpage_box_avatar"></a>
+                        <div class="fanpage_group_name">
+                            <a href="https://www.facebook.com/Vergency.vn/?ref=embed_page"
+                                id="fanpage_name">Vergency</a>
+                            <p>266K người theo dõi</p>
+                        </div>
+                    </div>
+                    <a href="#" class="follow_page" id="follow_page">
+                        <i class="fab fa-facebook"></i><b> Theo dõi Trang</b>
+                    </a>
+                </nav>
+                <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                <script>
+                    $(document).ready(function () {
+                        $('#follow_page').click(function (e) {
+                            e.preventDefault();
+                            $(this).text('Đã theo dõi').prepend('<i class="fab fa-facebook"></i> ');
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="footer_end">
+            <p>©Bản quyền thuộc về chúng tôi.</p>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('bookingDuration').addEventListener('input', function () {
+            const duration = this.value;
+            const price = duration * 50;
+            document.getElementById('estimatedPrice').textContent = '$' + price;
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Booking submitted successfully!');
+        });
+    </script>
+    <script src="../Javascript/menu.js"></script>
+
+
+</body>
+
+</html>
