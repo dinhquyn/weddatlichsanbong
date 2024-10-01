@@ -1,0 +1,98 @@
+
+#admin{
+    background-color: #f8f9fa;
+}
+.container-fluid {
+    max-width: 1200px;
+}
+
+.table th {
+    background-color: #e9ecef;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-danger:hover {
+    color: #fff;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.img-thumbnail {
+    object-fit: cover;
+    height: 75px;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        margin-bottom: 1rem;
+        display: block;
+        border: 1px solid #dee2e6;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+#successPopup .modal-content,
+#deleteConfirmModal .modal-content {
+    border-radius: 15px;
+}
+
+#successPopup .modal-header,
+#deleteConfirmModal .modal-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#successPopup .modal-body,
+#deleteConfirmModal .modal-body {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#successPopup .btn-success,
+#deleteConfirmModal .btn-danger {
+    width: 100%;
+}
+
+#deleteConfirmModal .btn-secondary {
+    width: 48%;
+}
+
+#deleteConfirmModal .btn-danger {
+    width: 48%;
+}

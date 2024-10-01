@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cập nhật thông tin sân bóng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="./yard_owner.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+
+<body id="admin">
+
+    <div class="header d-flex justify-content-between">
+        <div class="openmenu"><button class="open"><i class='bx bx-menu'></i></button></div>
+        <a href=""><img src="../img/header_img/logo.png" alt="Logo" class="img-fluid logo"></a>
+        <a href="" class="login"><i class='bx bxs-user-circle'></i></a>
+        <div class="overlay hidden">
+            <div class="side-bar">
+                <div class="title">
+                    <label class="cancel" for="check"><i class="fas fa-times"></i></label>
+                </div>
+                <ul>
+                    <li><a href="../index_yard_owner.html"><i class="fas fa-home" style="margin-right: 10px;"></i>Trang
+                            Chủ</a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-stream" style="margin-right: 10px;"></i>Tổng quát</a></li>
+                    <li><a href="../History/History.html"><i class="fas fa-calendar-week"
+                                style="margin-right: 10px;"></i>Lịch
+                            đã
+                            đặt</a>
+                    </li>
+                    <li><a href="/Field_detail/football_detail.html"><i class="fas fa-qestion-circle"
+                                style="margin-right: 10px;"></i>Thông tin</a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-sliders-h" style="margin-right: 10px;"></i>Dich vụ</a></li>
+                    <li><a href="#"><i class="fas fa-phone-volume" style="margin-right: 10px;"></i>Liên hệ</a></li>
+                    <li><a href="#"><i class="fas fa-comments" style="margin-right: 10px;"></i>Đánh giá</a></li>
+                </ul>
+                <div class="media-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-4">
+        <h1 class="mb-4"><i class="bi bi-flag-fill text-success me-2"></i>Cập nhật thông tin sân bóng</h1>
+
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm sân..." aria-label="Search fields">
+                    <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addFieldModal">
+                    <i class="bi bi-plus-circle me-2"></i>Thêm mới sân
+                </button>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên sân bóng</th>
+                        <th>Vị trí</th>
+                        <th>Trạng thái</th>
+                        <th>Kích thước</th>
+                        <th>Ảnh</th>
+                        <th>Sửa/Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sân bóng Đô Nghĩa </td>
+                        <td>Khu đô thị Đô Nghĩa</td>
+                        <td><span class="badge bg-success">Tốt</span></td>
+                        <td>5000</td>
+                        <td><img src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d"
+                                alt="Greenfield Stadium" class="img-thumbnail" style="width: 100px;"></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"
+                                data-bs-target="#editFieldModal"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete('Sân bóng')"><i
+                                    class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sân bóng Phenikaa</td>
+                        <td>Nguyễn Trác, Hà Đông, Hà Nội</td>
+                        <td><span class="badge bg-warning text-dark">Vừa</span></td>
+                        <td>3000</td>
+                        <td><img src="../img/Fields/sb1.jpg" alt="Riverside Arena" class="img-thumbnail"
+                                style="width: 100px;"></td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal"
+                                data-bs-target="#editFieldModal"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete('Sân bóng')"><i
+                                    class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Field Modal -->
+    <div class="modal fade" id="addFieldModal" tabindex="-1" aria-labelledby="addFieldModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addFieldModalLabel">Thêm mới sân</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addFieldForm">
+                        <div class="mb-3">
+                            <label for="fieldName" class="form-label">Tên sân</label>
+                            <input type="text" class="form-control" id="fieldName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldLocation" class="form-label">Vị trí</label>
+                            <input type="text" class="form-control" id="fieldLocation" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldCapacity" class="form-label">Kích thước</label>
+                            <input type="number" class="form-control" id="fieldCapacity" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldStatus" class="form-label">Trạng thái</label>
+                            <select class="form-select" id="fieldStatus" required>
+                                <option value="available">Tốt</option>
+                                <option value="booked">Vừa</option>
+                                <option value="maintenance">Trung bình</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldLocation" class="form-label">Giá Thuê</label>
+                            <input type="text" class="form-control" id="fieldLocation" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldImage" class="form-label">Ảnh</label>
+                            <input type="file" class="form-control" id="fieldImage" accept="image/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <img id="imagePreview" src="#" alt="Field Image Preview"
+                                style="max-width: 100%; display: none;">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" form="addFieldForm" class="btn btn-primary">Thêm mới</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Field Modal -->
+    <div class="modal fade" id="editFieldModal" tabindex="-1" aria-labelledby="editFieldModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editFieldModalLabel">Chỉnh sửa sân</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editFieldForm">
+                        <div class="mb-3">
+                            <label for="editFieldName" class="form-label">Tên sân</label>
+                            <input type="text" class="form-control" id="editFieldName" value="Greenfield Stadium"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editFieldLocation" class="form-label">Vị Trí</label>
+                            <input type="text" class="form-control" id="editFieldLocation" value="Central Park"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editFieldCapacity" class="form-label">Kích thước</label>
+                            <input type="number" class="form-control" id="editFieldCapacity" value="5000" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editFieldStatus" class="form-label">Trạng thái</label>
+                            <select class="form-select" id="editFieldStatus" required>
+                                <option value="available" selected>Tốt</option>
+                                <option value="booked">Vừa</option>
+                                <option value="maintenance">Trung bình</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fieldLocation" class="form-label">Giá Thuê</label>
+                            <input type="text" class="form-control" id="fieldLocation" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editFieldImage" class="form-label">Ảnh</label>
+                            <input type="file" class="form-control" id="editFieldImage" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <img id="editImagePreview" src="https://images.unsplash.com/photo-1556056504-5c7696c4c28d"
+                                alt="Field Image Preview" style="max-width: 100%;">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" form="editFieldForm" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="modal fade" id="successPopup" tabindex="-1" aria-labelledby="successPopupLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="successPopupLabel">Thành Công</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="successMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="deleteConfirmModalLabel">Xác nhận xóa sân bóng</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn muốn xóa <span id="fieldToDelete"></span>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteField()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('fieldImage').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const img = document.getElementById('imagePreview');
+                img.src = event.target.result;
+                img.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('editFieldImage').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const img = document.getElementById('editImagePreview');
+                img.src = event.target.result;
+            }
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('addFieldForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show the success popup
+            const addFieldModal = bootstrap.Modal.getInstance(document.getElementById('addFieldModal'));
+            addFieldModal.hide();
+            const successPopup = new bootstrap.Modal(document.getElementById('successPopup'));
+            document.getElementById('successMessage').textContent = 'Đã gửi yêu cầu thêm mới tới admin!';
+            successPopup.show();
+        });
+
+        document.getElementById('editFieldForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show the success popup
+            const editFieldModal = bootstrap.Modal.getInstance(document.getElementById('editFieldModal'));
+            editFieldModal.hide();
+            const successPopup = new bootstrap.Modal(document.getElementById('successPopup'));
+            document.getElementById('successMessage').textContent = 'Đã gửi yêu cầu chỉnh sửa tới admin!';
+            successPopup.show();
+        });
+
+        function confirmDelete(fieldName) {
+            document.getElementById('fieldToDelete').textContent = fieldName;
+            const deleteConfirmModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
+            deleteConfirmModal.show();
+        }
+
+        function deleteField() {
+            // Here you would typically send a request to your server to delete the field
+            // For this example, we'll just show the success popup
+            const deleteConfirmModal = bootstrap.Modal.getInstance(document.getElementById('deleteConfirmModal'));
+            deleteConfirmModal.hide();
+            const successPopup = new bootstrap.Modal(document.getElementById('successPopup'));
+            document.getElementById('successMessage').textContent = 'Đã gửi yêu cầu xóa sân bóng tới admin!';
+            successPopup.show();
+        }
+    </script>
+    <script src="../Javascript/menu.js"></script>
+
+</body>
+
+</html>
