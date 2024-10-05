@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Booking History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="../yard_owner_history/yard_owner_history.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+
+<body>
+    <div>
+        <div class="header d-flex justify-content-between">
+            <div class="openmenu"><button class="open"><i class='bx bx-menu'></i></button></div>
+            <a href=""><img src="../img/header_img/logo.png" alt="Logo" class="img-fluid logo"></a>
+            <a href="" class="login"><i class='bx bxs-user-circle'></i></a>
+            <div class="overlay hidden">
+                <div class="side-bar">
+                    <div class="title">
+                        <label class="cancel" for="check"><i class="fas fa-times"></i></label>
+                    </div>
+                    <ul>
+                        <li><a href="../index_yard_owner.html"><i class="fas fa-home"
+                                    style="margin-right: 10px;"></i>Trang
+                                Chủ</a></li>
+                        <li><a href="#"><i class="fas fa-stream" style="margin-right: 10px;"></i>Tổng quát</a></li>
+                        <li><a href="../yard_owner_history/yard_owner_history.html"><i class="fas fa-calendar-week"
+                                    style="margin-right: 10px;"></i>Lịch
+                                đã
+                                đặt</a>
+                        </li>
+                        <li><a href="/Field_detail/football_detail.html"><i class="fas fa-qestion-circle"
+                                    style="margin-right: 10px;"></i>Thông tin</a>
+                        </li>
+                        <li><a href="#"><i class="fas fa-sliders-h" style="margin-right: 10px;"></i>Dich vụ</a></li>
+                        <li><a href="#"><i class="fas fa-phone-volume" style="margin-right: 10px;"></i>Liên hệ</a></li>
+                        <li><a href="#"><i class="fas fa-comments" style="margin-right: 10px;"></i>Đánh giá</a></li>
+                    </ul>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid py-5">
+            <h1 class="mb-5 text-primary text-center"><i class="fas fa-history me-3"></i>Lịch sử đã đặt sân bóng</h1>
+
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-primary text-white"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" id="searchInput" placeholder="Tìm kiếm">
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-primary text-white"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="date" class="form-control" id="startDate">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-primary text-white"><i class="fas fa-calendar-alt"></i></span>
+                        <input type="date" class="form-control" id="endDate">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-5">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead class="table-light">
+                                <tr>
+                                    <th><a href="#" class="text-decoration-none text-dark">Tên người dùng <i
+                                                class="fas fa-sort"></i></a></th>
+                                    <th><a href="#" class="text-decoration-none text-dark">Thời gian <i
+                                                class="fas fa-sort"></i></a></th>
+                                    <th><a href="#" class="text-decoration-none text-dark">Sân <i
+                                                class="fas fa-sort"></i></a></th>
+                                    <th>Trạng thái</th>
+                                    <th>Thông tin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-user me-2 text-primary"></i>Việt Anh</td>
+                                    <td><i class="far fa-calendar me-2 text-primary"></i>2023-06-15</td>
+                                    <td><i class="fas fa-futbol me-2 text-primary"></i>Phenikaa</td>
+                                    <td><span class="badge bg-warning text-dark"><i class="fas fa-clock me-1"></i>Chờ
+                                            duyệt</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal"
+                                            data-bs-target="#userModal"><i class="fas fa-eye me-1"></i>Xem</button>
+                                        <button class="btn btn-sm btn-success me-2" onclick="confirmBooking(this)"><i
+                                                class="fas fa-check me-1"></i>Xác nhận</button>
+                                        <button class="btn btn-sm btn-danger" onclick="cancelBooking(this)"><i
+                                                class="fas fa-times me-1"></i>Hủy</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-user me-2 text-primary"></i>Quang Giáp</td>
+                                    <td><i class="far fa-calendar me-2 text-primary"></i>2023-06-14</td>
+                                    <td><i class="fas fa-futbol me-2 text-primary"></i>Đô Nghĩa</td>
+                                    <td><span class="badge bg-success"><i class="fas fa-check me-1"></i>Xác nhận</span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal"
+                                            data-bs-target="#userModal"><i class="fas fa-eye me-1"></i>Xem</button>
+                                        <button class="btn btn-sm btn-success me-2" onclick="confirmBooking(this)"
+                                            disabled><i class="fas fa-check me-1"></i>Xác nhận</button>
+                                        <button class="btn btn-sm btn-danger" onclick="cancelBooking(this)"><i
+                                                class="fas fa-times me-1"></i>Hủy</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-user me-2 text-primary"></i>Thành Đạt</td>
+                                    <td><i class="far fa-calendar me-2 text-primary"></i>2023-06-13</td>
+                                    <td><i class="fas fa-futbol me-2 text-primary"></i>Phenikaa</td>
+                                    <td><span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã hủy</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal"
+                                            data-bs-target="#userModal"><i class="fas fa-eye me-1"></i>Xem</button>
+                                        <button class="btn btn-sm btn-success me-2" onclick="confirmBooking(this)"><i
+                                                class="fas fa-check me-1"></i>Xác nhận</button>
+                                        <button class="btn btn-sm btn-danger" onclick="cancelBooking(this)" disabled><i
+                                                class="fas fa-times me-1"></i>Hủy</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation" class="mb-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span
+                                aria-hidden="true">&laquo;</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span
+                                aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
+
+            <h2 class="text-center mb-5 text-primary">Thị trường</h2>
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Độ phổ biến của sân</h5>
+                            <canvas id="coursePopularityChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Trạng thái</h5>
+                            <canvas id="bookingStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Xu hướng đặt theo tháng</h5>
+                            <canvas id="monthlyTrendChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="userModalLabel"><i class="fas fa-user-circle me-2"></i>Chi tiết
+                            người
+                            dùng</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
+                                alt="User Profile" class="img-fluid rounded-circle mb-3"
+                                style="width: 120px; height: 120px;">
+                            <h4 class="mb-0">Việt Anh</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <p><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong></p>
+                                <p class="text-muted">john.doe@example.com</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <p><i class="fas fa-phone me-2 text-primary"></i><strong>Số điện thoại:</strong></p>
+                                <p class="text-muted">(123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <p><i class="fas fa-futbol me-2 text-primary"></i><strong>Sân:</strong></p>
+                                <p class="text-muted">Phenikaa</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <p><i class="fas fa-calendar-alt me-2 text-primary"></i><strong>Ngày đặt:</strong></p>
+                                <p class="text-muted">2023-06-15</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i class="fas fa-info-circle me-2 text-primary"></i><strong>Trạng thái:</strong></p>
+                                <p><span class="badge bg-warning text-dark"><i class="fas fa-clock me-1"></i>Chờ
+                                        duyệt</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
+                                class="fas fa-times me-1"></i>Đóng</button>
+                        <button type="button" class="btn btn-success" onclick="confirmBookingModal()"><i
+                                class="fas fa-check me-1"></i>Xác nhận</button>
+                        <button type="button" class="btn btn-danger" onclick="cancelBookingModal()"><i
+                                class="fas fa-ban me-1"></i>Hủy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            function confirmBooking(button) {
+                const row = button.closest('tr');
+                const statusCell = row.querySelector('td:nth-child(4)');
+                statusCell.innerHTML = '<span class="badge bg-success"><i class="fas fa-check me-1"></i>Đã xác nhận</span>';
+                button.disabled = true;
+                row.querySelector('.btn-danger').disabled = false;
+            }
+
+            function cancelBooking(button) {
+                const row = button.closest('tr');
+                const statusCell = row.querySelector('td:nth-child(4)');
+                statusCell.innerHTML = '<span class="badge bg-danger"><i class="fas fa-ban me-1"></i>Đã hủy</span>';
+                button.disabled = true;
+                row.querySelector('.btn-success').disabled = false;
+            }
+
+            function confirmBookingModal() {
+                const statusBadge = document.querySelector('#userModal .modal-body .badge');
+                statusBadge.className = 'badge bg-success';
+                statusBadge.innerHTML = '<i class="fas fa-check me-1"></i>Confirmed';
+                document.querySelector('#userModal .btn-success').disabled = true;
+                document.querySelector('#userModal .btn-danger').disabled = false;
+            }
+
+            function cancelBookingModal() {
+                const statusBadge = document.querySelector('#userModal .modal-body .badge');
+                statusBadge.className = 'badge bg-danger';
+                statusBadge.innerHTML = '<i class="fas fa-ban me-1"></i>Cancelled';
+                document.querySelector('#userModal .btn-danger').disabled = true;
+                document.querySelector('#userModal .btn-success').disabled = false;
+            }
+
+            // Chart.js
+            document.addEventListener('DOMContentLoaded', function () {
+                // Biểu đồ mức độ phổ biến của khóa học
+                var coursePopularityCtx = document.getElementById('coursePopularityChart').getContext('2d');
+                var coursePopularityChart = new Chart(coursePopularityCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Sân Phenikaa', 'Sân Đô Nghĩa', 'Sân Đại Nam', 'Sân Giáp Nhất', 'Sân La Khê'],
+                        datasets: [{
+                            label: 'Số lượng đã đặt',
+                            data: [65, 59, 80, 81, 56],
+                            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                // Biểu đồ trạng thái đặt chỗ
+                var bookingStatusCtx = document.getElementById('bookingStatusChart').getContext('2d');
+                var bookingStatusChart = new Chart(bookingStatusCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Xác nhận', 'Chờ duyệt', 'Hủy'],
+                        datasets: [{
+                            data: [300, 50, 100],
+                            backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+                        }]
+                    }
+                });
+
+                // Biểu đồ xu hướng đặt phòng hàng tháng
+                var monthlyTrendCtx = document.getElementById('monthlyTrendChart').getContext('2d');
+                var monthlyTrendChart = new Chart(monthlyTrendCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'Số lượng đã đặt',
+                            data: [12, 19, 3, 5, 2, 3],
+                            borderColor: 'rgba(0, 123, 255, 1)',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+        <script src="../Javascript/menu.js"></script>
+</body>
+
+</html>
