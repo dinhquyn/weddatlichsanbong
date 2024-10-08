@@ -270,3 +270,17 @@ body::before {
     width: 20px;
     margin-right: 10px;
 }
+.btn-login{
+    background-color: #28303e;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn-login:hover {
+    opacity: 1;
+    background-color: #ff0000;
+}

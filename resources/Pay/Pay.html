@@ -157,6 +157,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         document.getElementById('paymentForm').addEventListener('submit', function (event) {
             event.preventDefault();
@@ -170,11 +171,42 @@
             if (file) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    alert('Payment submitted successfully!\n\nName: ' + name + '\nEmail: ' + email + '\nBooking: ' + date + ' at ' + time + '\nAmount: $' + amount);
+                    // Hiển thị thông báo sử dụng SweetAlert2
+                    Swal.fire({
+                        title: 'Đã thanh toán thành công!',
+                        text: 'Thông tin thanh toán đã được gửi tới chủ sân.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Lưu trạng thái thanh toán vào localStorage
+                            localStorage.setItem('paymentStatus', 'Đã thanh toán');
+                            // Chuyển hướng về trang chủ hoặc trang xác nhận
+                            window.location.href = '../index.html';
+                        }
+                    });
                 };
                 reader.readAsDataURL(file);
             } else {
-                alert('Please attach a payment proof.');
+                Swal.fire({
+                    title: 'Lỗi!',
+                    text: 'Vui lòng đính kèm bằng chứng thanh toán.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+
+        // Kiểm tra và hiển thị trạng thái thanh toán khi trang được tải
+        window.addEventListener('load', function () {
+            var paymentStatus = localStorage.getItem('paymentStatus');
+            if (paymentStatus === 'Đã thanh toán') {
+                Swal.fire({
+                    title: 'Thông báo',
+                    text: 'Bạn đã thanh toán thành công!',
+                    icon: 'info',
+                    confirmButtonText: 'OK'
+                });
             }
         });
     </script>
