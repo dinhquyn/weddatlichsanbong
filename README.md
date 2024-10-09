@@ -14,16 +14,11 @@ Dự án này là một ứng dụng web cho phép người dùng đặt lịch 
 ## Công nghệ sử dụng
 
 - **Frontend**: HTML, CSS, JavaScript, [Bootstrap](https://getbootstrap.com/) (cho thiết kế đáp ứng)
-- **Backend**: [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)
-- **Cơ sở dữ liệu**: [MongoDB](https://www.mongodb.com/) (lưu trữ dữ liệu người dùng và lịch đặt)
 
 ## Cài đặt
 
 ### Yêu cầu
 
-- Đã cài đặt [Node.js](https://nodejs.org/)
-- Đã cài đặt và chạy [MongoDB](https://www.mongodb.com/)
-- Đã cài đặt [Git](https://git-scm.com/)
 
 ### Hướng dẫn cài đặt
 
@@ -32,29 +27,7 @@ Dự án này là một ứng dụng web cho phép người dùng đặt lịch 
     ```bash
   https://github.com/dinhquyn/weddatlichsanbong.git
     ```
-
-2. Cài đặt các gói phụ thuộc:
-
-    ```bash
-    npm install
-    ```
-
-3. Tạo file `.env` để lưu trữ các biến môi trường:
-
-    ```env
-    PORT=3000
-    MONGO_URI=chuoi-ket-noi-mongodb-cua-ban
-    SESSION_SECRET=chuoi-bao-mat-cho-session
-    STRIPE_SECRET_KEY=chuoi-khoa-bi-mat-cua-stripe
-    ```
-
-4. Chạy ứng dụng:
-
-    ```bash
-    npm start
-    ```
-
-5. Mở trình duyệt và truy cập `http://localhost:3000` để sử dụng ứng dụng.
+Mở trình duyệt và truy cập  để sử dụng ứng dụng.
 
 ## Sử dụng
 
