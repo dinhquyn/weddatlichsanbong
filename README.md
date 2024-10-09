@@ -27,7 +27,7 @@ Dự án này là một ứng dụng web cho phép người dùng đặt lịch 
     ```bash
   https://github.com/dinhquyn/weddatlichsanbong.git
     ```
-Mở trình duyệt và truy cập  để sử dụng ứng dụng.
+Mở trình duyệt và truy cập https://dinhquyn.github.io/weddatlichsanbong/  để sử dụng ứng dụng.
 
 ## Sử dụng
 
